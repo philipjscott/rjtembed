@@ -19,7 +19,9 @@ Ie. use the "oe" prefix to set oembed values. All other prefixes will be used to
 ### Specifications
 
 [Open Graph Protocol](https://ogp.me/)
+
 [oEmbed](https://oembed.com/)
+
 [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started)
 
 ### Full example

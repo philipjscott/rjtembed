@@ -30,6 +30,7 @@ function handleMeta(origin, searchParams) {
 		}
 	}
 	const title = searchParams.get("title") || ""
+	const favicon = searchParams.get("favicon")
 	const metaHTML = meta.map(m => `<meta content="${m.value}" property="${m.prefix}:${m.prop}">`).join("")
 	let oembedHTML = ""
 	if (Object.keys(oembed).length > 0) {
@@ -41,6 +42,10 @@ function handleMeta(origin, searchParams) {
 	if (theme) {
 		themeHTML = `<meta name="theme-color" content="#${theme}">`
 	}
+	let faviconHTML = ""
+	if (favicon) {
+		faviconHTML = `<link rel="icon" href="${favicon}" type="image/png">`
+	}
 	const html = `
 <!DOCTYPE html>
 <html>
@@ -49,6 +54,7 @@ function handleMeta(origin, searchParams) {
 ${metaHTML}
 ${themeHTML}
 ${oembedHTML}
+${faviconHTML}
 </head>
 </html>
 `

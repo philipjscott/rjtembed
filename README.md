@@ -6,9 +6,11 @@ Deployed to https://embed.scotty.workers.dev/
 
 `/meta?fooBar=Baz` will render `<meta property="foo:bar" content="baz">`
 
-There are three exceptions:
+There are four exceptions:
 
 `/meta?title=blah` will render `<title>blah</title>`
+
+`/meta?favicon=blah` will render `<link rel="icon" href="blah" type="image/png">` (only PNGs are supported)
 
 `/meta?theme=ffffff` will render `<meta name="theme-color" content="#ffffff">`
 
